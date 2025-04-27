@@ -5,18 +5,19 @@ class GameFrame extends JFrame {
     public GameFrame(boolean withFadeIn) {
         setTitle("Shadow Heist - Map");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
         GameMap gameMap = new GameMap(this);
+
+        // Setăm culoarea de fundal ca să nu mai apară spațiul gri/alb
+
         setContentPane(gameMap);
-        pack(); // setează dimensiunea pe baza preferințelor hărții
 
-        // Opțional: fullscreen simplu (fără decoruri)
-        // setExtendedState(JFrame.MAXIMIZED_BOTH);
-        // setUndecorated(true);
-
+        setUndecorated(false);
+        pack();                    // Ajustează fereastra după dimensiunea hărții
+        setResizable(false);       // Nu permitem redimensionarea
+        setLocationRelativeTo(null); // Centrează pe ecran
         setVisible(true);
-
+        setSize(736,576);
         if (withFadeIn) {
             FadePanel fade = new FadePanel();
             fade.setBounds(0, 0, getWidth(), getHeight());

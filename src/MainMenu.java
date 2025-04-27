@@ -54,19 +54,19 @@ class MainMenu extends JFrame {
         backgroundLabel.add(titlePanel);
 
         JButton startButton = createStyledButton("Start", customFont);
-        startButton.setBounds(50, 100, 200, 40);
+        startButton.setBounds(50, 160, 200, 40);
         backgroundLabel.add(startButton);
 
         JButton loadButton = createStyledButton("Load", customFont);
-        loadButton.setBounds(50, 160, 200, 40);
+        loadButton.setBounds(50, 220, 200, 40);
         backgroundLabel.add(loadButton);
 
         JButton highscoresButton = createStyledButton("Highscores", customFont);
-        highscoresButton.setBounds(50, 220, 200, 40);
+        highscoresButton.setBounds(50, 280, 200, 40);
         backgroundLabel.add(highscoresButton);
 
         JButton exitButton = createStyledButton("Exit", customFont);
-        exitButton.setBounds(50, 280, 200, 40);
+        exitButton.setBounds(50, 340, 200, 40);
         backgroundLabel.add(exitButton);
 
         overlay = new FadePanel();
